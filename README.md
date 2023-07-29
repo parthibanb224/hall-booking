@@ -5,7 +5,7 @@
 <a href="https://hall-booking-do0j.onrender.com" target="_blank">https://hall-booking-do0j.onrender.com</a>
 
 
-<!-- ### for getting all room details
+### for getting all room details
 
 get method:
 https://hall-booking-do0j.onrender.com/rooms/
@@ -42,4 +42,4 @@ https://hall-booking-do0j.onrender.com/users/
 ### for getting particular customers booked data
 
 get method:
-https://hall-booking-do0j.onrender.com/bookings/muthu -->
+https://hall-booking-do0j.onrender.com/bookings/muthu
