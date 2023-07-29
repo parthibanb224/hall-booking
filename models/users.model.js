@@ -4,8 +4,8 @@ const {Schema} = mongoose;
 const usersSchema = new Schema({
     customerName : String,
     roomName : String,
-    roomId : {type:Schema.Types.ObjectId, required:true},
-    date : Date,
+    roomId : String,
+    date : String,
     startTime : String,
     endTime : String
 })

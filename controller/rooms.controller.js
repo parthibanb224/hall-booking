@@ -30,4 +30,24 @@ RoomsRouter.get('/',(req,res,next) => {
 })
 
 
+RoomsRouter.post('/createRoom', (req,res,next) => {
+    const data = req.body;
+    const NewRoom = new roomsModel(data);
+    NewRoom.save()
+    .then(response => {
+        return res.status(200).json({
+            result : response,
+            success : true,
+            message : "createRoom successfully"
+        })
+    })
+    .catch(err => {
+        return res.status(401).json({
+            success : false,
+            message : "create room failed",
+            Error : err
+        })
+    })
+})
+
 module.exports = RoomsRouter;

@@ -28,4 +28,25 @@ usersRouter.get('/',(req,res,next) => {
     })
 })
 
+
+usersRouter.post('/createUser', (req,res,next) => {
+    const data = req.body;
+    const NewUser = new userModel(data);
+    NewUser.save()
+    .then(response => {
+        return res.status(200).json({
+            result : response,
+            success : true,
+            message : "createUser successfully"
+        })
+    })
+    .catch(err => {
+        return res.status(401).json({
+            success : false,
+            message : "createUser failed",
+            Error : err
+        })
+    })
+})
+
 module.exports = usersRouter;

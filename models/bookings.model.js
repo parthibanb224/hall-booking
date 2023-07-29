@@ -2,10 +2,11 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const bookingSchema = new Schema({
-    cutomerName : String,
+    bookingId : Number,
+    customerName : String,
     roomName : String,
-    roomId : Schema.Types.ObjectId,
-    date : Date,
+    roomId : Number,
+    date : String,
     start : String,
     end : String,
     status : String
