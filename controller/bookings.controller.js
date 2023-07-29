@@ -74,7 +74,7 @@ BookingsRouter.get('/:name', (req,res,next) => {
     const {name} = req.params;
     bookingModel.find()
     .then(response => {
-        const matchedData = response.filter(item => item.customerName === name);
+        const matchedData = response.filter(item => item.customerName == name);
         return res.status(200).json({
             result : matchedData,
             success : true,
