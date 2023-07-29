@@ -11,7 +11,7 @@ HTTP_SERVER.use(bodyParser.json());
 require('./Database/dbConfig');
 
 const port = 5000;
-HTTP_SERVER.listen(port, 'localhost',() => {
+HTTP_SERVER.listen(port, '0.0.0.0',() => {
     console.log("server running in this port",port);
 })
 
